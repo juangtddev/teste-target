@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inverter String</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      input,
+      button {
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 16px;
+      }
+      #resultado {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Inverter String</h1>
+    <p>Digite uma string abaixo para inverter os caracteres:</p>
+
+    <!-- Campo de entrada -->
+    <input type="text" id="inputString" placeholder="Digite uma string" />
+
+    <!-- Botão para inverter -->
+    <button onclick="inverterString()">Inverter</button>
+
+    <!-- Área para exibir o resultado -->
+    <p id="resultado"></p>
+
+    <script>
+      function inverterString() {
+        // Obtém a string digitada pelo usuário
+        const str = document.getElementById("inputString").value;
+
+        // Verifica se a entrada está vazia
+        if (!str) {
+          document.getElementById("resultado").textContent =
+            "Por favor, digite uma string!";
+          return;
+        }
+
+        // Lógica para inverter a string
+        let stringInvertida = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          stringInvertida += str[i];
+        }
+
+        // Exibe o resultado na página
+        document.getElementById(
+          "resultado"
+        ).textContent = `String invertida: ${stringInvertida}`;
+      }
+    </script>
+  </body>
+</html>

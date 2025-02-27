@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificação de Fibonacci</title>
+  </head>
+  <body>
+    <h1>Verificação de Fibonacci</h1>
+    <script>
+      function verificaFibonacci(numero) {
+        let a = 0,
+          b = 1; // Inicializa os dois primeiros números da sequência
+        let fibonacci = [a, b]; // Armazena a sequência gerada
+
+        // Gera a sequência de Fibonacci até que o último número seja maior ou igual ao número informado
+        while (b < numero) {
+          let proximo = a + b; // Calcula o próximo número da sequência
+          fibonacci.push(proximo); // Adiciona o próximo número à sequência
+          a = b; // Atualiza o valor de 'a'
+          b = proximo; // Atualiza o valor de 'b'
+        }
+
+        // Verifica se o número informado está na sequência
+        if (fibonacci.includes(numero)) {
+          alert(`O número ${numero} pertence à sequência de Fibonacci.`);
+        } else {
+          alert(`O número ${numero} NÃO pertence à sequência de Fibonacci.`);
+        }
+
+        // Opcional: Exibe a sequência gerada no console
+        console.log("Sequência de Fibonacci gerada:", fibonacci.join(", "));
+      }
+
+      // Solicita ao usuário um número
+      const numeroInformado = parseInt(
+        prompt(
+          "Digite um número para verificar se pertence à sequência de Fibonacci:"
+        )
+      );
+
+      // Verifica se o número pertence à sequência
+      verificaFibonacci(numeroInformado);
+    </script>
+  </body>
+</html>
