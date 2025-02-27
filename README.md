@@ -10,7 +10,7 @@ Este repositório contém a resolução de cinco desafios técnicos desenvolvido
 
 ```plaintext
 /
-├── teste1.js        # Desafio 1: Soma de números
+├── teste1.js        # Desafio 1: Soma de números (Resultado esperado = 91)
 ├── teste2.html      # Desafio 2: Sequência de Fibonacci (HTML + JS)
 ├── teste3.js        # Desafio 3: Análise de faturamento diário
 ├── teste4.js        # Desafio 4: Percentual de faturamento por estado
